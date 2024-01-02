@@ -88,20 +88,42 @@ module.exports = {
       colors: {
         black: "#121212",
         accent: {
-         50: "#EBEDFF",
-      100: "#D6DAFF",
-      200: "#A8B1FF",
-      300: "#808CFF",
-      400: "#5263FF",
-      500: "#283CFF",
-      600: "#0017EB",
-      700: "#0012B3",
-      800: "#000C75",
-      900: "#00063D"
+          50: "#EBEDFF",
+          100: "#D6DAFF",
+          200: "#A8B1FF",
+          300: "#808CFF",
+          400: "#5263FF",
+          500: "#283CFF",
+          600: "#0017EB",
+          700: "#0012B3",
+          800: "#000C75",
+          900: "#00063D",
         },
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
+      keyframes: {
+        text: {
+          "0%": {
+            "background-size": "200% 200%",
+            "background-position": "0",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "100%",
+          },
+        },
+        wiggle: {
+          "0%": { transform: "rotate(0)" },
+          "25%": { transform: "rotate(-25deg)" },
+          "75%": { transform: "rotate(25deg)" },
+          "100%": { transform: "rotate(0)" },
+        },
+      },
+      animation: {
+        text: "text 3s ease infinite",
+        wiggle: "wiggle 0.5s ease-in-out",
       },
     },
   },
