@@ -1,8 +1,8 @@
-<section class="bg-white border-b border-black/5">
+<section class="border-b border-black/5 bg-transparent backdrop-blur-xl fixed right-0 left-0 z-[99]">
   <div class="w-full mx-auto md:px-12 px-8 max-w-7xl lg:px-16">
     <div
       x-data="{ open: false }"
-      class="relative flex flex-col w-full py-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6">
+      class="relative flex flex-col w-full py-5 mx-auto md:items-center md:justify-between md:flex-row md:px-6">
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <a href="/" class=" text-black inline-flex items-center gap-3">
           <img src="/favicon.png" alt="logo" class="w-10 h-10" />
@@ -36,10 +36,16 @@
       <nav
         :class="{'flex': open, 'hidden': !open}"
         class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
-        <a
+          <a
+            class="text-sm font-medium text-black hover:text-accent-400 lg:ml-auto"
+            href="/#features">See Features</a
+          >
+          <a
           class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 lg:ml-auto"
-          href="/#features">Features</a
+          href="https://zcal.co/ilaiszp/Dolphin30min"
+          >Chat with the Founders</a
         >
+
         <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
           <a
             href="https://app.getdolphin.ai?view=signup"
