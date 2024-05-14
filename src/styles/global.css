@@ -75,7 +75,7 @@
 
 .panel__inner {
   padding: 2rem 1rem;
-  border: solid 2px #64748b;
+  border: solid 2px transparent;
   border-radius: 0.5rem;
 }
 
