@@ -1,0 +1,65 @@
+---
+import Marquee from "../marquee/Marquee";
+
+
+const companies = [
+    {
+        name: 'Hubble HQ',
+        logo: 'companies/hubble.png'
+    },
+    {
+        name: 'SeedLegals',
+        logo: 'companies/seedlegals.png'
+    },
+    {
+        name: 'Mantaray',  
+        logo: 'companies/mantaray.png'
+    },
+    {
+        name: "Upstage",
+        logo: 'companies/upstage.png'
+    },
+    {
+        name: 'Hubble HQ',
+        logo: 'companies/hubble.png'
+    },
+    {
+        name: 'SeedLegals',
+        logo: 'companies/seedlegals.png'
+    },
+    {
+        name: 'Mantaray',  
+        logo: 'companies/mantaray.png'
+    },
+    {
+        name: "Upstage",
+        logo: 'companies/upstage.png'
+    }
+]
+
+---
+
+<section class="flex justify-center flex-col items-center space-y-12 my-24">
+    <div>
+        <p
+          class="text-black font-extrabold lg:text-5xl text-4xl tracking-tighter">
+          You're in good company
+        </p>
+        <strong class="text-gray-700 lg:text-2xl"></strong>
+    </div>
+    <div class="w-1/2 m-auto">
+        <Marquee client:load>
+            <div class="flex space-x-4">
+                {companies.map(({ logo }) => (
+                    <div class="p-4 mx-4 flex justify-center flex-col items-center">
+                        <img 
+                            src={logo}
+                            class="w-24"
+                        />
+                    </div>
+                ))}
+            </div>
+        </Marquee>
+    </div>
+</section>
+
