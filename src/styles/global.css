@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+.accordion__wrapper {
+  border: transparent;
+}
+
 .accordion__header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +44,8 @@
 
 .accordion__item .accordion__header:focus {
   outline-offset: -6px;
+  outline: none;
+  border: solid 2px transparent;
 }
 
 .accordion__item:only-of-type .accordion__header,
