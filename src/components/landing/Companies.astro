@@ -48,7 +48,7 @@ const companies = [
         <strong class="text-gray-700 lg:text-2xl"></strong>
     </div>
     <div class="w-1/2 m-auto">
-        <Marquee client:load gradient={true}>
+        <Marquee client:load gradient={true} speed={25}>
             <div class="flex space-x-4">
                 {companies.map(({ logo }) => (
                     <div class="p-4 mx-4 flex justify-center flex-col items-center">
