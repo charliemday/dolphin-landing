@@ -1,55 +1,49 @@
 ---
-import { Accordion, AccordionItem } from 'accessible-astro-components'
+import { Accordion, AccordionItem } from "accessible-astro-components";
 
 const faqs = [
   {
-    "title": "How do I get in touch with customer support?",
-    "text": "You can reach our customer support team at team@getdolphin.ai"
+    title: "How do I get in touch with customer support?",
+    text: "You can reach our customer support team at team@getdolphin.ai",
   },
   {
-    "title": "What kind of personal data do you collect?",
-    "text": "We collect minimal personal data, such as names, email addresses, and IP addresses, to provide personalized services and improve user experiences."
+    title: "What kind of personal data do you collect?",
+    text: "We collect minimal personal data, such as names, email addresses, and IP addresses, to provide personalized services and improve user experiences.",
   },
   {
-    "title": "How do you store and protect my personal data?",
-    "text": "We store personal data on secure servers with encryption, access controls, and industry-standard security measures."
+    title: "How do you store and protect my personal data?",
+    text: "We store personal data on secure servers with encryption, access controls, and industry-standard security measures.",
   },
   {
-    "title": "Do you share my personal data with third parties?",
-    "text": "No. We do not share personal data with third parties, except as necessary for our operations, with your explicit consent, or when required by law. We ensure our partners adhere to similar data protection standards."
+    title: "Do you share my personal data with third parties?",
+    text: "No. We do not share personal data with third parties, except as necessary for our operations, with your explicit consent, or when required by law. We ensure our partners adhere to similar data protection standards.",
   },
   {
-    "title": "How long do you retain my personal data?",
-    "text": "After you delete your account we will remove your personal data from our servers within 30 days."
+    title: "How long do you retain my personal data?",
+    text: "After you delete your account we will remove your personal data from our servers within 30 days.",
   },
   {
-    "title": "What are my rights regarding my personal data?",
-    "text": "You have the right to access, correct, delete, or restrict the processing of your personal data. You can exercise these rights by contacting our Data Protection Officer."
+    title: "What are my rights regarding my personal data?",
+    text: "You have the right to access, correct, delete, or restrict the processing of your personal data. You can exercise these rights by contacting our Data Protection Officer.",
   },
   {
-    "title": "How do I contact your Data Protection Officer?",
-    "text": "You can reach our Data Protection Officer at team@getdolphin.ai with any questions, concerns, or requests regarding your personal data."
-  }
-]
-
-
-
+    title: "How do I contact your Data Protection Officer?",
+    text: "You can reach our Data Protection Officer at team@getdolphin.ai with any questions, concerns, or requests regarding your personal data.",
+  },
+];
 ---
+
 <section class="w-1/2 m-auto my-36 space-y-8">
-    <div>
-        <h1
-            class="text-4xl font-bold text-center"
-        >FAQs</h1>
-    </div>
-    <Accordion>
-        {
-            faqs.map(faq => (
-                <AccordionItem
-                    header={faq.title}
-                >
-                    <p>{faq.text}</p>
-                </AccordionItem>
-            ))
-        }
-    </Accordion>
+  <div>
+    <h1 class="text-4xl font-bold text-center">FAQs</h1>
+  </div>
+  <Accordion>
+    {
+      faqs.map((faq) => (
+        <AccordionItem header={faq.title}>
+          <p>{faq.text}</p>
+        </AccordionItem>
+      ))
+    }
+  </Accordion>
 </section>

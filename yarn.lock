@@ -28,6 +28,11 @@
   resolved "https://registry.npmjs.org/@antfu/utils/-/utils-0.7.7.tgz"
   integrity sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==
 
+"@astrojs/compiler@^1.5.5":
+  version "1.8.2"
+  resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-1.8.2.tgz"
+  integrity sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==
+
 "@astrojs/compiler@^2.3.4":
   version "2.3.4"
   resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-2.3.4.tgz"
@@ -3310,6 +3315,20 @@ preferred-pm@^3.1.2:
     path-exists "^4.0.0"
     which-pm "2.0.0"
 
+prettier-plugin-astro@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.npmjs.org/prettier-plugin-astro/-/prettier-plugin-astro-0.14.0.tgz"
+  integrity sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==
+  dependencies:
+    "@astrojs/compiler" "^1.5.5"
+    prettier "^3.0.0"
+    sass-formatter "^0.7.6"
+
+prettier@^3.0.0, prettier@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-3.3.2.tgz"
+  integrity sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==
+
 prismjs@^1.29.0:
   version "1.29.0"
   resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.29.0.tgz"
@@ -3596,6 +3615,11 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
+s.color@0.0.15:
+  version "0.0.15"
+  resolved "https://registry.npmjs.org/s.color/-/s.color-0.0.15.tgz"
+  integrity sha512-AUNrbEUHeKY8XsYr/DYpl+qk5+aM+DChopnWOPEzn8YKzOhv4l2zH6LzZms3tOZP3wwdOyc0RmTciyi46HLIuA==
+
 safe-buffer@~5.2.0:
   version "5.2.1"
   resolved "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz"
@@ -3605,6 +3629,13 @@ safe-buffer@~5.2.0:
   version "2.1.2"
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+sass-formatter@^0.7.6:
+  version "0.7.9"
+  resolved "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.7.9.tgz"
+  integrity sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==
+  dependencies:
+    suf-log "^2.5.3"
 
 sass@*, sass@^1.77.4:
   version "1.77.4"
@@ -3931,6 +3962,13 @@ sucrase@^3.32.0:
     mz "^2.7.0"
     pirates "^4.0.1"
     ts-interface-checker "^0.1.9"
+
+suf-log@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.npmjs.org/suf-log/-/suf-log-2.5.3.tgz"
+  integrity sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==
+  dependencies:
+    s.color "0.0.15"
 
 supports-color@^5.3.0:
   version "5.5.0"

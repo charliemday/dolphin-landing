@@ -1,43 +1,40 @@
 ---
-
 let companies = [
-    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },
-    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },    { name: 'Company 1', logo: 'company1-logo.jpg' },
-    { name: 'Company 2', logo: 'company2-logo.jpg' },
-    // Add more companies here
-  ];
-
-
-
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  { name: "Company 1", logo: "company1-logo.jpg" },
+  { name: "Company 2", logo: "company2-logo.jpg" },
+  // Add more companies here
+];
 ---
 
-
 <div class="overflow-x-auto w-1/2 m-auto relative" id="scroll-container">
-    <div 
-        class="w-12 h-full absolute bg-gradient-to-r from-white via-white"
-    />
-    <div class="flex flex-nowrap gap-6 py-2">
-        {
-        companies.map((company) => (
-          <div class="bg-white rounded-md shadow-md px-4 py-2">
-            <img src={company.logo} alt={company.name} class="h-8 w-8 mr-2">
-            <span>{company.name}</span>
-          </div>
-        ))
-      }
-    </div>
-    <div 
-        class="w-12 h-full absolute bg-gradient-to-r from-blue via-white right-0 top-0"
-    />
+  <div class="w-12 h-full absolute bg-gradient-to-r from-white via-white"></div>
+  <div class="flex flex-nowrap gap-6 py-2">
+    {
+      companies.map((company) => (
+        <div class="bg-white rounded-md shadow-md px-4 py-2">
+          <img src={company.logo} alt={company.name} class="h-8 w-8 mr-2" />
+          <span>{company.name}</span>
+        </div>
+      ))
+    }
+  </div>
+  <div
+    class="w-12 h-full absolute bg-gradient-to-r from-blue via-white right-0 top-0"
+  >
+  </div>
 </div>
-  
-
 
 <style>
   #scroll-container {
@@ -74,11 +71,9 @@ let companies = [
   }
 </style>
 
-
-
 <script>
-  const scrollContainer = document.querySelector('#scroll-container');
-  const items = scrollContainer.querySelectorAll('.flex .bg-white');
+  const scrollContainer = document.querySelector("#scroll-container");
+  const items = scrollContainer.querySelectorAll(".flex .bg-white");
   let scrollWidth = scrollContainer.scrollWidth;
   let clientWidth = scrollContainer.clientWidth;
   let currentItem = 0;
@@ -86,7 +81,8 @@ let companies = [
 
   function autoScroll() {
     const itemWidth = items[0].offsetWidth;
-    const targetPosition = (currentItem % items.length) * itemWidth - scrollWidth + clientWidth;
+    const targetPosition =
+      (currentItem % items.length) * itemWidth - scrollWidth + clientWidth;
     const distance = targetPosition - scrollPosition;
     const duration = 100;
     let startTime = Date.now();
@@ -109,13 +105,16 @@ let companies = [
     requestAnimationFrame(animation);
   }
 
-  scrollContainer.addEventListener('scroll', () => {
+  scrollContainer.addEventListener("scroll", () => {
     scrollWidth = scrollContainer.scrollWidth;
     clientWidth = scrollContainer.clientWidth;
     if (scrollContainer.scrollLeft === 0) {
       currentItem = 0;
     }
-    if (scrollContainer.scrollLeft === scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+    if (
+      scrollContainer.scrollLeft ===
+      scrollContainer.scrollWidth - scrollContainer.clientWidth
+    ) {
       currentItem = items.length;
     }
   });
