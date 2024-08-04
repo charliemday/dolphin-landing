@@ -1,11 +1,11 @@
 ---
 import {
-LuAlignEndHorizontal,
 LuHome,
 LuLayers,
 LuMessageCircle,
 LuPuzzle,
 LuSearch,
+LuShieldCheck
 } from "react-icons/lu";
 
 const items = [
@@ -14,7 +14,9 @@ const items = [
     icon: LuLayers,
   },
   {
-    text: "Analyse 500+ data points in under 20sec.",
+    text: "Analyse 500+ data points under 30 seconds.",
+    linkText: "Check it out 👈",
+    linkUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7222528931323654144/',
     icon: LuSearch,
   },
   {
@@ -30,8 +32,8 @@ const items = [
     icon: LuHome,
   },
   {
-    text: "Track the 'Voice of the Customer' over time, and place the right product bets.",
-    icon: LuAlignEndHorizontal,
+    text: "Industry standard data security practices implemented.",
+    icon: LuShieldCheck,
   },
 ];
 ---
@@ -73,6 +75,14 @@ const items = [
                         <p class="mt-4 text-lg font-semibold leading-6 text-black font-display tracking-tight">
                           {item.text}
                         </p>
+                       {item.linkText && 
+                       <div class="mt-4">
+                       <a href={item.linkUrl} target="_blank" class="font-medium hover:underline cursor-pointer">
+                          {item.linkText}
+                        </a>
+
+                       </div>
+                        }
                       </>
                     </div>
                     <div class="mt-4 text-gray-500 text-sm"></div>
