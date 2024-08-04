@@ -23,25 +23,9 @@ const companies = [
     logo: "companies/upstage.png",
   },
   {
-    name: "Hubble HQ",
-    logo: "companies/hubble.png",
-  },
-  {
-    name: "SeedLegals",
-    logo: "companies/seedlegals.png",
-  },
-  {
-    name: "Mantaray",
-    logo: "companies/mantaray.png",
-  },
-  {
-    name: "Upstage",
-    logo: "companies/upstage.png",
-  },
-  {
-    name: "tl;dv",
-    logo: "companies/tldv.png",
-  },
+    name: "Popp AI",
+    logo: "companies/poppai.png"
+  }
 ];
 ---
 
@@ -56,7 +40,7 @@ const companies = [
     <Marquee client:load gradient={true} speed={25}>
       <div class="flex space-x-4">
         {
-          companies.map(({ logo }) => (
+          Array.from({ length: 2 }, () => companies).flat().map(({ logo }) => (
             <div class="p-4 mx-4 flex justify-center flex-col items-center">
               <img src={logo} class="w-24" />
             </div>
