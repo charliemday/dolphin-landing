@@ -1,5 +1,7 @@
 ---
+import DotPattern from "@/components/magicui/dot-pattern.tsx";
 import Companies from "./Companies.astro";
+
 ---
 
 <section>
@@ -7,27 +9,32 @@ import Companies from "./Companies.astro";
   <div
     class="mx-auto w-full lg:px-12 max-w-8xl md:px-12 items-center relative"
   >
-    <div class="pt-24 ">
-      <div class="text-center mx-auto lg:pt-18"> 
-
+  <div class="pt-32">
+    <div class="text-center mx-auto lg:pt-18"> 
+      <div class="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
         <!-- HERO TITLE -->
-        <p
-          class="text-slate-900 pt-20 font-extrabold lg:text-8xl text-4xl tracking-tight"
-        >
-          Automate your<br />
-          <p
-            class="text-black font-extrabold lg:text-8xl text-4xl bg-gradient-to-r from-blue-500 via-red-500 to-purple-400 inline-block text-transparent bg-clip-text"
-          >
-            Customer Feedback
-          </p>
+        <DotPattern className="z-10 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"/>
+         <div class="z-20">
 
-          <p class="text-slate-900 font-extrabold lg:text-8xl text-4xl tracking-tight">
-            Analysis
+           <p
+             class="text-slate-900 font-extrabold lg:text-8xl text-4xl tracking-tight"
+           >
+             Automate your<br />
+             <p
+               class="text-black font-extrabold lg:text-8xl text-4xl bg-gradient-to-r from-blue-500 via-red-500 to-purple-400 inline-block text-transparent bg-clip-text"
+             >
+               Customer Feedback
+             </p>
+   
+             <p class="text-slate-900 font-extrabold lg:text-8xl text-4xl tracking-tight">
+               Analysis
+   
+             </p>
+           </p>
+         </div>
 
-          </p>
-        </p>
-
-
+        </div>  
+          
         <!-- HERO SUBTITLE -->
           <p class="text-gray-700 lg:text-lg max-w-2xl mt-4 mx-auto text-base">
             Feedback is all over the place.

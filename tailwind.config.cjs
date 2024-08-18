@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-module.exports = {
+export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontSize: {
@@ -124,10 +124,15 @@ module.exports = {
           "75%": { transform: "rotate(25deg)" },
           "100%": { transform: "rotate(0)" },
         },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         text: "text 3s ease infinite",
         wiggle: "wiggle 0.5s ease-in-out",
+        grid: "grid 15s linear infinite",
       },
     },
   },
