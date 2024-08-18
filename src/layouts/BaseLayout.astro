@@ -1,10 +1,10 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import BaseHead from "@/components/BaseHead.astro";
 ---
 
 <html
   lang="en"
-  class="scroll-smooth selection:bg-accent-500 selection:text-white no-touchevents hydrated"
+  class="scroll-smooth no-touchevents hydrated"
 >
   <head>
     <BaseHead />
@@ -15,17 +15,17 @@ import BaseHead from "../components/BaseHead.astro";
   <body class="bg-white">
     <slot />
     <div
-      class="senja-embed"
-      data-id="74faf71a-7756-4e10-8215-473552558e35"
-      data-mode="shadow"
-      data-lazyload="false"
-      data-spinner="false"
-    >
-    </div>
-    <script
-      async
-      type="text/javascript"
-      src="https://widget.senja.io/widget/74faf71a-7756-4e10-8215-473552558e35/platform.js"
-    ></script>
+    class="senja-embed"
+    data-id="74faf71a-7756-4e10-8215-473552558e35"
+    data-mode="shadow"
+    data-lazyload="false"
+    data-spinner="false"
+  >
+  </div>
+  <script
+    async
+    type="text/javascript"
+    src="https://widget.senja.io/widget/74faf71a-7756-4e10-8215-473552558e35/platform.js"
+  ></script>
   </body>
 </html>

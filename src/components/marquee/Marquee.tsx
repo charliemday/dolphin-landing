@@ -1,18 +1,21 @@
 import * as React from "react";
 import {
-  CSSProperties,
   Children,
-  FC,
   Fragment,
-  MutableRefObject,
-  ReactNode,
-  RefAttributes,
   forwardRef,
   useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
+} from "react";
+
+import type {
+  CSSProperties,
+  FC,
+  MutableRefObject,
+  ReactNode,
+  RefAttributes,
 } from "react";
 
 import "./Marquee.scss";
@@ -142,7 +145,7 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
     onMount,
     children,
   },
-  ref
+  ref,
 ) {
   // React Hooks
   const [containerWidth, setContainerWidth] = useState(0);
@@ -171,7 +174,7 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
         setMultiplier(
           marqueeWidth < containerWidth
             ? Math.ceil(containerWidth / marqueeWidth)
-            : 1
+            : 1,
         );
       } else {
         setMultiplier(1);
@@ -240,10 +243,10 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
         direction === "up"
           ? "rotate(-90deg)"
           : direction === "down"
-          ? "rotate(90deg)"
-          : "none",
+            ? "rotate(90deg)"
+            : "none",
     }),
-    [style, play, pauseOnHover, pauseOnClick, direction]
+    [style, play, pauseOnHover, pauseOnClick, direction],
   );
 
   const gradientStyle = useMemo(
@@ -254,7 +257,7 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
           ? `${gradientWidth}px`
           : gradientWidth,
     }),
-    [gradientColor, gradientWidth]
+    [gradientColor, gradientWidth],
   );
 
   const marqueeStyle = useMemo(
@@ -266,7 +269,7 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
       ["--iteration-count" as string]: !!loop ? `${loop}` : "infinite",
       ["--min-width" as string]: autoFill ? `auto` : "100%",
     }),
-    [play, direction, duration, delay, loop, autoFill]
+    [play, direction, duration, delay, loop, autoFill],
   );
 
   const childStyle = useMemo(
@@ -275,10 +278,10 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
         direction === "up"
           ? "rotate(90deg)"
           : direction === "down"
-          ? "rotate(-90deg)"
-          : "none",
+            ? "rotate(-90deg)"
+            : "none",
     }),
-    [direction]
+    [direction],
   );
 
   // Render {multiplier} number of children
@@ -286,7 +289,7 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
     (multiplier: number) => {
       return [
         ...Array(
-          Number.isFinite(multiplier) && multiplier >= 0 ? multiplier : 0
+          Number.isFinite(multiplier) && multiplier >= 0 ? multiplier : 0,
         ),
       ].map((_, i) => (
         <Fragment key={i}>
@@ -300,7 +303,7 @@ const Marquee: FC<MarqueeProps> = forwardRef(function Marquee(
         </Fragment>
       ));
     },
-    [childStyle, children]
+    [childStyle, children],
   );
 
   return !isMounted ? null : (

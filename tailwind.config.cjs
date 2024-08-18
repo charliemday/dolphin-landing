@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -99,6 +98,11 @@ module.exports = {
           800: "#000C75",
           900: "#00063D",
         },
+        primary: "var(--aw-color-primary)",
+        secondary: "var(--aw-color-secondary)",
+        accent: "var(--aw-color-accent)",
+        default: "var(--aw-color-text-default)",
+        muted: "var(--aw-color-text-muted)",
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
