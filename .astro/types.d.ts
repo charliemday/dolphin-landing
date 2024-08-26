@@ -175,33 +175,40 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"post": {
+"dolphin-first-event.md": {
+	id: "dolphin-first-event.md";
+  slug: "dolphin-first-event";
+  body: string;
+  collection: "post";
+  data: any
+} & { render(): Render[".md"] };
 "get-started-website-with-astro-tailwind-css.md": {
 	id: "get-started-website-with-astro-tailwind-css.md";
   slug: "get-started-website-with-astro-tailwind-css";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "how-to-customize-astrowind-to-your-brand.md": {
 	id: "how-to-customize-astrowind-to-your-brand.md";
   slug: "how-to-customize-astrowind-to-your-brand";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "landing.md": {
 	id: "landing.md";
   slug: "landing";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 "useful-resources-to-create-websites.md": {
 	id: "useful-resources-to-create-websites.md";
   slug: "useful-resources-to-create-websites";
   body: string;
   collection: "post";
-  data: InferEntrySchema<"post">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -213,5 +220,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config");
+	type ContentConfig = never;
 }
