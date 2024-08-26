@@ -180,35 +180,35 @@ declare module 'astro:content' {
   slug: "dolphin-first-event";
   body: string;
   collection: "post";
-  data: any
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 "get-started-website-with-astro-tailwind-css.md": {
 	id: "get-started-website-with-astro-tailwind-css.md";
   slug: "get-started-website-with-astro-tailwind-css";
   body: string;
   collection: "post";
-  data: any
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 "how-to-customize-astrowind-to-your-brand.md": {
 	id: "how-to-customize-astrowind-to-your-brand.md";
   slug: "how-to-customize-astrowind-to-your-brand";
   body: string;
   collection: "post";
-  data: any
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 "landing.md": {
 	id: "landing.md";
   slug: "landing";
   body: string;
   collection: "post";
-  data: any
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 "useful-resources-to-create-websites.md": {
 	id: "useful-resources-to-create-websites.md";
   slug: "useful-resources-to-create-websites";
   body: string;
   collection: "post";
-  data: any
+  data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
 };
 
@@ -220,5 +220,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

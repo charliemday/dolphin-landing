@@ -10,7 +10,7 @@ tags:
   - events
   - customer feedback
 metadata:
-  canonical:
+  canonical: https://getdolphin.ai/dolphin-first-event
 ---
 
 If you know me, you know I’m a big believer in the power of live events to communicate, drive action, or promote a change of behaviour.
